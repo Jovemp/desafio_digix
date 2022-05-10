@@ -1,0 +1,6 @@
+node_modules
+coverage
+globalConfig.json
+dist
+data
+!src/data
