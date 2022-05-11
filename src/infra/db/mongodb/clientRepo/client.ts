@@ -11,7 +11,7 @@ export class ClientRepo implements AddClientRepo {
 
   async list (): Promise<ClientModel[]> {
     const clientCollections = await MongoHelper.getCollection('clients')
-    var sort = { score: -1 }
+    var sort = { score: 1 }
     const results = await clientCollections.find().sort(sort).toArray()
 
     const clients = results.map(result => MongoHelper.map(result))

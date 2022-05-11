@@ -1,7 +1,7 @@
 {
   "name": "Digix",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/main/server.js",
   "author": "Paulo Edson <jovemp@hotmail.com>",
   "license": "MIT",
   "devDependencies": {

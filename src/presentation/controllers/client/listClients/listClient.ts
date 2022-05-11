@@ -6,11 +6,7 @@ import { ListClient } from '../../../../domain/useCases/list-client'
 export class ListClientsController implements Controller {
   constructor (private readonly listClients: ListClient) {}
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
-    try {
-      const clients = await this.listClients.list()
-      return Promise.resolve(ok(clients))
-    } catch (err) {
-      return serverError(err)
-    }
+    const clients = await this.listClients.list()
+    return Promise.resolve(ok(clients))
   }
 }
